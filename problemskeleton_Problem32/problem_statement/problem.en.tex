@@ -15,12 +15,19 @@
 
 \begin{document}
 
-\problemname{Title of the Problem Here}
+\problemname{Booby Trap Treasure Hunt}
 
 % Example use of the \illustration command
 % \illustration{0.3}{filename.jpg}{Photo by \href{url_here}{link text here, e.g. author name}}
 
 Put the problem story here. Here are some common issues to keep in mind as you edit:
+Jimothy is a seasoned adventurer scavenging the underground golden dungeon of the mad wizard, he stumbles onto a room laden with Treasure
+but for each Treasure stands before him a booby trap of varying difficulty, before he tackles the challenges 
+he must decide in what order to face them to minimize his FATIGUE as a lot of the ziggurat still needs to be explored.
+
+Each booby trap requires a different level of 0 <= FOCUS_i <= 100, and a set amount of STEPS_i. Each step causing fatigue
+related to the difference in between the current booby trap's focus level and the previous one 
+since the continuous fluctuation in focus level is tiring on Jimothy's think box.
 
 \begin{itemize}
     \item Use \LaTeX{} math mode for (most) numbers. The few exceptions are for years (e.g., 2019) or whenever a number is part of a string token.
@@ -32,12 +39,22 @@ Put the problem story here. Here are some common issues to keep in mind as you e
 \section*{Input}
 
 Put the input format (syntax) description here, including constraints on all input values. That includes number ranges, the maximum number of digits after the decimal point for real values, the character sets and length ranges for strings, etc. If possible, always give a count of the number of items that follow (test cases, e.g.) rather than delimiting with a token or EOF. The input format should be fairly precise, so that the reader knows exactly what to expect (it should usually be easy to write a program to read the input using line-oriented or token-oriented parsing).
+First line of input will be number N indicating the number of booby traps followed by N lines for each booby trap
+containing 2 integers, STEPS_i for the number of steps, and FOCUS_i for the focus level.
 
 \section*{Output}
 
 Describe the output. Kattis output judging is not sensitive to case changes or space changes (including line formatting and blank lines). Try to maintain this flexibility with your problem—do not be overly precise or prescriptive here in the output formatting description. However, if exact textual matching or floating-point precision is required, do specify the constraints (e.g., ``your answer should be correct within a relative or absolute error of $10^{-3}$'').
+The minimum fatigue Jimothy can incur when disarming all the booby traps.
 
 \section*{Sample Input 1	Sample Output 1}
 Please provide at least one sample Input and Output for your problem.
+3
+1 2
+3 4
+5 6
+
+at each step you lose the difference between the current focus level and the last one
+steps = 10, energy_lost = steps * (cur_focus_level - last_focus_level)
 
 \end{document}
