@@ -31,9 +31,11 @@
 % \end{itemize}
 
 Jimothy is a seasoned adventurer scavenging the underground golden dungeon of the mad wizard, he stumbles onto a room where N traps of increasing complexity guard the way.\\\\
-Jimothy needs to disarm every \(trap_i)\) but has to warm up by solving the easiest (\(trap_1\)) before he gets to choose, otherwise he does not dare disarm the others.\\\\
+Jimothy needs to disarm every \(trap_i\) but has to warm up by solving the easiest (\(trap_1\)) before he gets to choose, otherwise he does not dare disarm the others.\\\\
 Each \(trap_i\) requires s steps and has c complexity. After each step of disarming a trap, Jimothy incurs fatigue based on the complexity of the trap with the most steps he has solved (none if it is the first).\\\\
-The most difficult trap contains an artifact that allows him to disarm all the other ones, allowing for easy treasure collection! How greedy...
+The most difficult trap contains an artifact that allows him to disarm all the other ones, allowing for easy treasure collection! How greedy...\\\\
+
+Help Jimothy disarm all the traps with minimum fatigue so that he can keep exploring this never-ending trove.
 \section*{Input}
 % Put the input format (syntax) description here, including constraints on all input values. That includes number ranges, the maximum number of digits after the decimal point for real values, the character sets and length ranges for strings, etc. If possible, always give a count of the number of items that follow (test cases, e.g.) rather than delimiting with a token or EOF. The input format should be fairly precise, so that the reader knows exactly what to expect (it should usually be easy to write a program to read the input using line-oriented or token-oriented parsing).
 The first line of input contains an integer n (constraint to be decided) indicating the number of traps followed by n lines for each trap containing 2 integers, \(steps_i\) and \(complexity_i\).\\
