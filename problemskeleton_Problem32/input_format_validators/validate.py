@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 
-# This is a sample input validator, written in Python 3.
 
-# Please refer to the comments in README.md for a description of the syntax it
-# is validating. Then, change it as you need.
 
 import sys
 import re
