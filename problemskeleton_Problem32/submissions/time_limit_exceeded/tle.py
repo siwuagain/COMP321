@@ -1,4 +1,4 @@
-from sys import stdin
+# Time complexity: O(n^2)
 n = int(input())
 steps = []
 complexities = []
