@@ -1,6 +1,6 @@
 // Time Complexity: O(n)
 // Space Complexity: O(n)
-package COMP321.problemskeleton_Problem32.submissions.accepted;
+package COMP321.problemskeleton_problem32.submissions.accepted;
 
 import java.util.*;
 import java.io.*;
