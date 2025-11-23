@@ -1,0 +1,10 @@
+greedy:
+This file tests the case where solving the first trap and none else 
+is the optimal solution before solving the final trap.
+
+inorder:
+This file tests the case where the optimal solution is to solve all the traps in order.
+
+mixed:
+This file tests the case where it is optimal to solve up to a certain trap, then skip to the final trap
+and then solve the rest.
