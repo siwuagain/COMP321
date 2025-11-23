@@ -22,3 +22,16 @@ and then solve the rest.
 
 secret_{1, 2, ... ,20}:
 This file's content is randomly generated, to ensure comprehensive coverage
+
+secret_greedy_large:
+This file tests the case where solving the first trap and none else 
+is the optimal solution before solving the final trap. The size of the input causes TLE
+if the Naive DP solution is used instead of Convex Hull Trick.
+
+secret_inorder_large:
+This file tests the case where the optimal solution is to solve all the traps in order.
+The size of the input causes TLE if the Naive DP solution is used instead of Convex Hull Trick.
+
+secret_mixed_large:
+This file tests the case where it is optimal to solve up to a certain trap, then skip to the final trap
+and then solve the rest. The size of the input causes TLE if the Naive DP solution is used instead of Convex Hull Trick.
