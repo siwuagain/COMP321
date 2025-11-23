@@ -12,14 +12,14 @@ def generate_random_cases(num_files=20):
     }
     
     for filename, lines in hardcoded.items():
-      input_f_path = os.path.join("./problemskeleton_Problem32/data/sample/", filename)
+      input_f_path = os.path.join("./problemskeleton_problem32/data/sample/", filename)
       
       with open(input_f_path, "w") as f:
         f.write("\n".join(lines) + "\n")
       
       with open(input_f_path, "r") as input_file:
         output_f_name = filename.replace(".in", ".ans")
-        output_f_path = os.path.join("./problemskeleton_Problem32/data/sample/", output_f_name)
+        output_f_path = os.path.join("./problemskeleton_problem32/data/sample/", output_f_name)
         
         input_lines = input_file.readlines()
         res = solve_for_output(input_lines)
@@ -42,12 +42,12 @@ def generate_random_cases(num_files=20):
       greedy_lines.append(f"{steps} {complexity}")
       steps += random.randint(1, 3)
     
-    greedy_path = os.path.join("./problemskeleton_Problem32/data/secret/", "secret_greedy_large.in")
+    greedy_path = os.path.join("./problemskeleton_problem32/data/secret/", "secret_greedy_large.in")
     with open(greedy_path, "w") as f:
       f.write("\n".join(greedy_lines) + "\n")
     
     with open(greedy_path, "r") as input_file:
-      greedy_output_path = os.path.join("./problemskeleton_Problem32/data/secret/", "secret_greedy_large.ans")
+      greedy_output_path = os.path.join("./problemskeleton_problem32/data/secret/", "secret_greedy_large.ans")
       input_lines = input_file.readlines()
       res = solve_for_output(input_lines)
       with open(greedy_output_path, "w") as out:
@@ -65,12 +65,12 @@ def generate_random_cases(num_files=20):
       inorder_lines.append(f"{steps} {complexity}")
       steps += 2
     
-    inorder_path = os.path.join("./problemskeleton_Problem32/data/secret/", "secret_inorder_large.in")
+    inorder_path = os.path.join("./problemskeleton_problem32/data/secret/", "secret_inorder_large.in")
     with open(inorder_path, "w") as f:
       f.write("\n".join(inorder_lines) + "\n")
     
     with open(inorder_path, "r") as input_file:
-      inorder_output_path = os.path.join("./problemskeleton_Problem32/data/secret/", "secret_inorder_large.ans")
+      inorder_output_path = os.path.join("./problemskeleton_problem32/data/secret/", "secret_inorder_large.ans")
       input_lines = input_file.readlines()
       res = solve_for_output(input_lines)
       with open(inorder_output_path, "w") as out:
@@ -97,12 +97,12 @@ def generate_random_cases(num_files=20):
       mixed_lines.append(f"{steps} {complexity}")
       steps += random.randint(1, 5)
     
-    mixed_path = os.path.join("./problemskeleton_Problem32/data/secret/", "secret_mixed_large.in")
+    mixed_path = os.path.join("./problemskeleton_problem32/data/secret/", "secret_mixed_large.in")
     with open(mixed_path, "w") as f:
       f.write("\n".join(mixed_lines) + "\n")
     
     with open(mixed_path, "r") as input_file:
-      mixed_output_path = os.path.join("./problemskeleton_Problem32/data/secret/", "secret_mixed_large.ans")
+      mixed_output_path = os.path.join("./problemskeleton_problem32/data/secret/", "secret_mixed_large.ans")
       input_lines = input_file.readlines()
       res = solve_for_output(input_lines)
       with open(mixed_output_path, "w") as out:
@@ -112,7 +112,7 @@ def generate_random_cases(num_files=20):
     # RANDOM #
     for i in range(1, num_files + 1):
       input_f_name = f"secret_{i}.in"
-      input_f_path = os.path.join("./problemskeleton_Problem32/data/secret/", input_f_name)
+      input_f_path = os.path.join("./problemskeleton_problem32/data/secret/", input_f_name)
       
       with open(input_f_path, "w") as f:
 
@@ -160,7 +160,7 @@ def generate_random_cases(num_files=20):
       #after writing the input file, plug it into the solver to obtain result for the output file
       with open(input_f_path, "r") as input:
         output_f_name = f"input_{i}.ans"
-        output_f_path = os.path.join("./problemskeleton_Problem32/data/secret/", output_f_name)        
+        output_f_path = os.path.join("./problemskeleton_problem32/data/secret/", output_f_name)        
 
         lines = input.readlines()
         res = solve_for_output(lines)
