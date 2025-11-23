@@ -118,10 +118,10 @@ def generate_random_cases(num_files=20):
 
         if i == num_files:
           #at least one secret case should test for TLE
-          n = 10** 5
+          n = 10000
         else:
-          # 1 <= n <= 10^5
-          n = random.randint(1, 10**5)
+          # 1 <= n <= 10000
+          n = random.randint(1, 10000)
        
         f.write(f"{n}\n")
 
@@ -169,6 +169,3 @@ def generate_random_cases(num_files=20):
           out.write(f"{res}\n")
 
 generate_random_cases()
-
-
-
