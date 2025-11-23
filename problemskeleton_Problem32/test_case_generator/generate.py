@@ -6,7 +6,7 @@ from solver import solve_for_output
 def generate_random_cases(num_files=20):
   
     for i in range(1, num_files + 1):
-      input_f_name = f"input_{i}.in"
+      input_f_name = f"secret_{i}.in"
       input_f_path = os.path.join("./problemskeleton_Problem32/data/sample/", input_f_name)
       
       with open(input_f_path, "w") as f:
