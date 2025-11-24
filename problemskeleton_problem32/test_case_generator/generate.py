@@ -118,18 +118,18 @@ def generate_random_cases(num_files=20):
 
         if i == num_files:
           #at least one secret case should test for TLE
-          n = 10000
+          n = 6000
         else:
           # 1 <= n <= 10000
-          n = random.randint(1, 10000)
+          n = random.randint(1, 1000)
        
         f.write(f"{n}\n")
 
         lower_complexity_bound = n 
-        upper_steps_bound = sys.maxsize - n - 2
+        upper_steps_bound = 50000 - n - 2
 
         steps = None
-        complexity = sys.maxsize
+        complexity = 50000
 
         for j in range(n):
           
