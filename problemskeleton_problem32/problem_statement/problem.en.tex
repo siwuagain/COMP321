@@ -42,15 +42,15 @@ Help Jimothy minimize his fatigue after disarming all the traps so that he can k
 \end{figure}
 \section*{Input}
 % Put the input format (syntax) description here, including constraints on all input values. That includes number ranges, the maximum number of digits after the decimal point for real values, the character sets and length ranges for strings, etc. If possible, always give a count of the number of items that follow (test cases, e.g.) rather than delimiting with a token or EOF. The input format should be fairly precise, so that the reader knows exactly what to expect (it should usually be easy to write a program to read the input using line-oriented or token-oriented parsing).
-The first line of input contains an integer 1 \(<=\) $N$ \(<= 10^5\) indicating the number of traps. 
+The first line of input contains an integer \(1 \le N \le 10^{5}\) indicating the number of traps. 
 The next $N$ lines each represent a \(trap_i\), where $i$ ranges from 1 to $N$. 
-Each of these lines contains two integers: \(S_i\), which denotes the number of steps required to disarm \(trap_i\), 
-and \(C_i\), which denotes its complexity.\\ \\
+Each of these lines contains two integers: \(1 \le S_{i} \le 10^{5}\), which denotes the number of steps required to disarm \(trap_i\), 
+and \(0 \le C_{i} \le 10^{5}\), which denotes its complexity.\\ \\
 The following conditions always hold: 
 \begin{itemize}
     \item \(S_1\) = 1
-    \item \(S_1\) \(<\) \(S_i\) \(<\) \(S_N\)
-    \item \(C_1\) \(>\) \(C_i\) \(>\) \(C_N\)
+    \item \(S_{1}\) \(<\) \(S_{2}\) \(<\) ... \(<\) \(S_{N-1}\) \(<\) \(S_N\)
+    \item \(C_1\) \(>\) \(C_2\) \(>\) ... \(>\) \(C_{N-1}\) \(>\) \(C_N\)
     \item \(C_N\) = 0
 \end{itemize}
 
