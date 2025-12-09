@@ -35,17 +35,21 @@ try:
         
         #steps_1 < steps_i < steps_n
         if prev_steps is not None:
-            print(f"Validating steps_{i}: {steps} is greater than the previous: {prev_steps}...")
+            print(f"Validating steps_{i}: {steps} is greater than the previous: {prev_steps} AND <= 10^5")
             assert steps <= 100000
             assert steps > prev_steps
             print(f"steps_{i} is valid")
         
         #complexity_1 > complexity_i > complexity_n
         if prev_complexity is not None:
-            print(f"Validating complexity_{i}: {complexity} is lesser than the previous: {prev_complexity}...")
+            print(f"Validating complexity_{i}: {complexity} is lesser than the previous: {prev_complexity} AND <= 10^5")
             assert complexity <= 100000
             assert complexity < prev_complexity
             print(f"complexity_{i} is valid")
+        else:
+            print("complexity_1 should be <= 10^5")
+            assert complexity <= 100000
+            print("complexity_1 is valid")
     
         prev_steps = steps
         prev_complexity = complexity
@@ -55,14 +59,16 @@ try:
     assert prev_complexity == 0
     print("complexity_n is valid")
 
-    print("Validating no input left...")
+    print("Validating no input left... (We are expecting a single newline after the last line for traps)")
     # ensure no extra input
     assert sys.stdin.readline() == ''
     print("Input file is valid, exiting successfully...")
     
     # if we get here, all is well; use exit code 42.
     sys.exit(42)
-except Exception as e:
-    print(f"Error: {e}")
+except SystemExit:
+    raise
+except:
+    print(f"Input file is invalid")
     # if we get here, the input is invalid, use exit code 1
     sys.exit(1)
