@@ -7,7 +7,7 @@ import re
 try:
     n_line = sys.stdin.readline()
     print(repr(n_line)) # useful for debugging to see where we have read
-    assert re.match('^[1-9][0-9]*\n$', n_line) # note: no leading zeros
+    assert re.match('^[1-9][0-9]{0,5}\n$', n_line) # note: no leading zeros
 
     n = int(n_line)
     assert 1 <= n <= 10**5
@@ -17,7 +17,7 @@ try:
         case_line = sys.stdin.readline()
         
         print(f"Line {i}: {repr(case_line)}")
-        assert re.match('^(0|[1-9][0-9]*) (0|[1-9][0-9]*)\n$', case_line)
+        assert re.match('^(0|[1-9][0-9]{0,5}) (0|[1-9][0-9]{0,5})\n$', case_line)
         print("Line has expected format")
         
         # parse the line
@@ -36,12 +36,14 @@ try:
         #steps_1 < steps_i < steps_n
         if prev_steps is not None:
             print(f"Validating steps_{i}: {steps} is greater than the previous: {prev_steps}...")
+            assert steps <= 100000
             assert steps > prev_steps
             print(f"steps_{i} is valid")
         
         #complexity_1 > complexity_i > complexity_n
         if prev_complexity is not None:
             print(f"Validating complexity_{i}: {complexity} is lesser than the previous: {prev_complexity}...")
+            assert complexity <= 100000
             assert complexity < prev_complexity
             print(f"complexity_{i} is valid")
     
