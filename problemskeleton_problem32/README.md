@@ -1,22 +1,49 @@
-Here are some instructions to help you test the different components of our problem submission
-From this directory "problemskeleton_problem32", the solutions are in ./submissions/[type]
-under their respective type (accepted, run_time_error, time_limit_exceeded, wrong_answer).
+# Problem Testing Guide
 
-E.g to run optimal solution in python: 
-    python3 ./submissions/accepted/accepted.py < ./data/secret/secret_mixed_large.in
-    
-    You might be interested in running the TLE solution and take notice of the considerable amount of time it takes compared to the optimal one:
-    python3 ./submissions/time_limit_exceeded/tle.py < ./data/secret/secret_mixed_large.in
+This guide explains how to test the different components of the problem submission.
 
-As shown above, the input/output files are in ./data/[sample | secret], the sample contains some hard coded cases that test behaviours on small input, but have equivalents that test it on big inputs (in the ./data/secrets).
+## Directory Structure
 
-The rest of the test cases are randomly generated using the test case generator
-which you can run this way:
-    
-    python3 ./test_case_generator/generate.py 
+From the `problemskeleton_problem32` directory:
+- Solutions are in `./submissions/[type]` under their respective type:
+  - `accepted`
+  - `run_time_error`
+  - `time_limit_exceeded`
+  - `wrong_answer`
 
-We created a solver function in the same directory ./test_case_generator/solver.py to help us generate the answer files.
+## Running Solutions
 
-Lastly the input validator is in ./input_format_validators/
-You can run it like this on a test case:
-    python3 ./input_format_validators/validate.py < data/secret/secret_mixed_large.in
+### Optimal Solution (Python)
+```bash
+python3 ./submissions/accepted/accepted.py < ./data/secret/secret_mixed_large.in
+```
+
+### Time Limit Exceeded Solution
+You might be interested in running the TLE solution and taking notice of the considerable amount of time it takes compared to the optimal one:
+```bash
+python3 ./submissions/time_limit_exceeded/tle.py < ./data/secret/secret_mixed_large.in
+```
+
+## Test Data
+
+Input/output files are located in `./data/[sample | secret]`:
+- **Sample data**: Contains hard-coded cases that test behaviors on small input, with equivalents that test on big inputs (in `./data/secret`)
+- **Secret data**: Contains larger test cases, with the rest randomly generated using the test case generator
+
+## Test Case Generator
+
+Run the test case generator:
+```bash
+python3 ./test_case_generator/generate.py
+```
+
+We created a solver function in `./test_case_generator/solver.py` to help generate the answer files.
+
+## Input Validator
+
+The input validator is in `./input_format_validators/`
+
+Run it on a test case:
+```bash
+python3 ./input_format_validators/validate.py < data/secret/secret_mixed_large.in
+```
